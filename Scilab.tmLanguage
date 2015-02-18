@@ -27,7 +27,7 @@
 ((?&gt;[a-zA-Z_]\w*))?
 (?&gt;\s*=\s*)?
 ((?&gt;[a-zA-Z_]\w*(?&gt;[?!]|=(?!&gt;))? )) # the function name
-(?=[ \t]*[^\s//|#]) # make sure arguments and not a comment follow
+(?=[ \t]*[^\s\/\/|#]) # make sure arguments and not a comment follow
 \s*(\() # the opening parenthesis for arguments</string>
 			<key>beginCaptures</key>
 			<dict>
@@ -191,6 +191,10 @@
 			<array>
 				<dict>
 					<key>include</key>
+					<string>#scilab_constant_language</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#scilab_keyword_all</string>
 				</dict>
 				<dict>
@@ -298,7 +302,7 @@
 			<key>comment</key>
 			<string>The user is trying to override scilab constants and functions.</string>
 			<key>match</key>
-			<string>(^|\;)\s*(%i|%inf|%nan|%e|%eps|$|%s|%pi)\s*=[^=]</string>
+			<string>(^|\;)\s*(%i|%inf|%nan|%e|%eps|%s|%z|%t|%T|%f|%F|%pi|PWD|SCI|SCIHOME|TMPDIR)\s*=[^=]</string>
 			<key>name</key>
 			<string>meta.inappropriate.scilab</string>
 		</dict>
@@ -364,11 +368,12 @@
 			<key>comment</key>
 			<string>scilab constants</string>
 			<key>match</key>
-			<string>(?&lt;!\.)\b(%eps|%f|%inf|%pi|%nan|%t|%s|%z|%e|home)\b</string>
+			<string>(?&lt;!\.)%\b(z|s|tk|F|T|nan|inf|gui|fftw|t|f|eps|io|i|e|pi)\b|\b(home|PWD|SCI|SCIHOME|TMPDIR)\b</string>
 			<key>name</key>
 			<string>constant.language.scilab</string>
 		</dict>
 		<key>scilab_keyword_commands</key>
+		<!-- list_keywords = getscilabkeywords(); a=list_keywords(3);b="";for i=1:size(a,1);if part(a(i),1)~="%" then b=b+"|"+a(i);end;end; fd = mopen("test2.txt",'wt');mfprintf(fd,b); mclose(fd);-->
 		<dict>
 			<key>comment</key>
 			<string>Commands</string>
@@ -427,7 +432,7 @@
 			<key>comment</key>
 			<string>Operator symbols</string>
 			<key>match</key>
-			<string>\s*(?!//)(==|~=|&gt;|&gt;=|&lt;|&lt;=|&amp;|&amp;&amp;|:|\||\|\||\+|-|\*|\.\*|/|\./|\\|\.\\|\^|\.\^)\s*</string>
+			<string>\s*(?!\/\/)(==|~=|&gt;|&gt;=|&lt;|&lt;=|&amp;|&amp;&amp;|:|\||\|\||\+|-|\*|\.\*|\/|\.\/|\\|\.\\|\^|\.\^)\s*</string>
 			<key>name</key>
 			<string>keyword.operator.symbols.scilab</string>
 		</dict>
