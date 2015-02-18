@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[select ${1:select_expression}
+	case ${2:case_expression} then
+		${3:body}
+	else
+		${4:body}
+end]]></content>
+    <tabTrigger>select</tabTrigger>
+    <scope>source.scilab</scope>
+    <description>select ... case ... else ... end</description>
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[if ${1:condition} then
+	${2:body}
+elseif ${3:condition} then
+	${4:body}
+else
+	${5:body}
+end
+]]></content>
+    <tabTrigger>ifeif</tabTrigger>
+    <scope>source.scilab </scope>
+    <description>if … elseif … end</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[// ${1:functionname}: ${2:function description}
+deff('[${3:outputs}] = ${1}(${4:arg})',
+'${3/,?\s*([a-zA-Z]\w*)|,\s*/(?1:\t$1 = ;'\n)/g}]]></content>
+    <tabTrigger>deff</tabTrigger>
+    <scope>source.scilab</scope>
+    <description>small function</description>
+</snippet>

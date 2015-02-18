@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[[${1:rep},${2:stat}] = unix_g('${3:Unix commands}');]]></content>
+    <tabTrigger>uni</tabTrigger>
+    <scope>source.scilab</scope>
+    <description>unix_g</description>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[warning(['${1:Description}']);]]></content>
+    <tabTrigger>war</tabTrigger>
+    <scope>source.scilab</scope>
+    <description>warning</description>
+</snippet>

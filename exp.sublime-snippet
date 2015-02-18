@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[exp($1) $2]]></content>
+    <tabTrigger>e</tabTrigger>
+    <scope>source.scilab</scope>
+    <description>exp</description>
+</snippet>
